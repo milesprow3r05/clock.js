@@ -41,5 +41,4 @@ function clock_Start() {
 }
 
 // main:
-clock_Init_Check();
 clock_Start();
