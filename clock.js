@@ -38,8 +38,16 @@ function clock_Init() {
 	document.body.appendChild(maindiv);
 }
 
+function clock_Stop() {
+	clearTimeout(clock_Timer);
+}
+
+function clock_Start() {
+	clock_Timer = setInterval(()=>{
+		clock_Update();
+	},update_interval);
+}
+
 // main:
 clock_Init();
-setInterval(()=>{
-	clock_Update();
-},update_interval);
+clock_Start();
