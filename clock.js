@@ -7,8 +7,6 @@ const update_interval = 800;
 var thistime;
 var formedstring;
 
-var maindiv = document.createElement('div');
-
 function clock_Update() {
 	thistime = new Date(); // Date object
 	var hours = thistime.getHours();
@@ -32,12 +30,6 @@ function clock_Update() {
 	document.getElementById('clock-value-here').innerHTML = formedstring;
 }
 
-function clock_Init() {
-	maindiv.id = 'clock-time';
-	maindiv.innerHTML = '<div class="clock-time-blocks"><img src="clock_js.gif" class="clock-time-block"><span id="clock-value-here" class="clock-time-block">00:00:00</span></div></div>';
-	document.body.appendChild(maindiv);
-}
-
 function clock_Stop() {
 	clearTimeout(clock_Timer);
 }
@@ -49,5 +41,5 @@ function clock_Start() {
 }
 
 // main:
-clock_Init();
+clock_Init_Check();
 clock_Start();
