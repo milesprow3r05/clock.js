@@ -1,6 +1,7 @@
 .clock-time {
 	background-color: #000000A0;
 	color: #FFFFFF;
+	font-family: 'Lucida Consolas', 'Console', 'Courier New', 'Courier', monospace;
 	position: fixed;
 	bottom: 8px;
 	right: 4px;
@@ -9,12 +10,12 @@
 }
 span.clock-time-block {
 	vertical-align: middle;
-	margin: 0 8px 0 8px; /* top, right, bottom, left */
+	margin: 0 8px;
 	opacity: 100%;
 }
 img.clock-time-block {
 	vertical-align: middle;
-	margin: 0 8px 0 8px; /* top, right, bottom, left */
+	margin: 0 8px;
 	opacity: 100%;
 	background-color: #00004AFF;
 }
@@ -22,12 +23,12 @@ img.clock-time-block {
 	line-height: 16px;
 }
 .clock-time:hover {
-	opacity: 0%;
+	opacity: 0;
 	animation: opacitier 1s infinite linear normal;
-	animation-iteration-count: 1;	
+	animation-iteration-count: 1;
 }
 .clock-time:active {
-	opacity: 0%;
+	opacity: 0;
 	animation: opacitier 1s infinite linear normal;
 	animation-iteration-count: 1;
 }
@@ -36,6 +37,6 @@ img.clock-time-block {
 		opacity: 100%;
 	}
 	to {
-		opacity: 0%;
+		opacity: 0;
 	}
 }
