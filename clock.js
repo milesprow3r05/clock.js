@@ -2,7 +2,7 @@
 	clock.js © Diicorp95. Licensed under MIT license.
 */
 
-const update_interval = 500;
+const update_interval = 800;
 
 var thistime;
 var formedstring;
@@ -11,20 +11,23 @@ var maindiv = document.createElement('div');
 
 function clock_Update() {
 	thistime = new Date(); // Date object
-	if (thistime.getHours() < 10) {
-		formedstring = '0'+thistime.getHours()+':'; // add zero before
+	var hours = thistime.getHours();
+	var minutes = thistime.getMinutes();
+	var seconds = thistime.getSeconds();
+	if (hours < 10) {
+		formedstring = '0'+hours+':'; // add zero before
 	} else {
-		formedstring = thistime.getHours()+':';
+		formedstring = hours+':';
 	}
-	if (thistime.getMinutes() < 10) {
-		formedstring += '0'+thistime.getMinutes()+':'; // add zero before
+	if (minutes < 10) {
+		formedstring += '0'+minutes+':'; // add zero before
 	} else {
-		formedstring += thistime.getMinutes()+':';
+		formedstring += minutes+':';
 	}
-	if (thistime.getSeconds() < 10) {
-		formedstring += '0'+thistime.getSeconds(); // add zero before
+	if (seconds < 10) {
+		formedstring += '0'+seconds; // add zero before
 	} else {
-		formedstring += thistime.getSeconds();
+		formedstring += seconds;
 	}
 	document.getElementById('clock-value-here').innerHTML = formedstring;
 }
